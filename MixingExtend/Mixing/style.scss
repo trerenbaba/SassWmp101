@@ -1,0 +1,33 @@
+div {
+  float: left;
+}
+
+@mixin box($color, $width) {
+  width: $width;
+  height: 100px;
+  background-color: $color;
+  margin: 15px;
+}
+
+#first {
+  //   width: 100px;
+  //   height: 100px;
+  //   background-color: red;
+  //   margin: 15px;
+  margin: 50px !important;
+  @include box(red, 150px);
+}
+#second {
+  //   width: 100px;
+  //   height: 100px;
+  //   background-color: red;
+  //   margin: 15px;
+  @include box(green, 200px);
+}
+#third {
+  //   width: 100px;
+  //   height: 100px;
+  //   background-color: red;
+  //   margin: 15px;
+  @include box(blue, 100px);
+}

@@ -1,0 +1,23 @@
+div {
+  float: left;
+}
+
+#first, #second, #third {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  background-color: red;
+}
+
+#first {
+  background-color: red;
+}
+
+#second {
+  background-color: green;
+}
+
+#third {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */

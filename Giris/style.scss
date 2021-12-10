@@ -1,0 +1,10 @@
+$color-primary: rgb(53, 72, 238);
+$color-red: red;
+
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+    color: $color-red;
+  }
+}

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+//varaible
+$c-primary: #007bff;
+$c-secondary: #5b5e61;
+$c-success: #057233;
+$c-white: #fff;
+$w-button: 90px;
+
+
+nav {
+  margin: 30px;
+  background-color: $c-success;
+  &::after {
+    //clearfix kullanarak floatun çıkardığı sorunu çözmüş olduk. (bootstrap sitesinde var )
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.navigation {
+  list-style: none; // linklerin başındaki noktaları kaldırır.
+  float: left;
+  li {
+    display: inline-block; //menu elemanlarını yan yana dizmeye yarıyor.
+    margin-left: 20px;
+    //nested yapısı
+    &:first-child {
+      margin: 0;
+    }
+    a {
+      text-decoration: none; //linklerin altındaki çizgiyi kaldırıyor
+      text-transform: uppercase;
+      color: $c-white;
+      display: inline-block;
+      padding: 10px;
+    }
+  }
+}
+.navigation-right {
+  float: right; //arka zemin rengini kaybetmemize neden olduğundan nav tagında clearfix işlemini yapıyoruz.
+}
+@mixin ortak {
+  padding: 10px;
+  display: inline-block;
+  width: $w-button;
+  border-radius: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $c-white;
+  text-align: center;
+}
+.btn-login,
+.btn-signup {
+  @include ortak();
+
+  &:link {
+    background-color: $c-primary;
+  }
+  &:hover {
+    background-color: lighten($c-primary, 30%);
+  }
+}

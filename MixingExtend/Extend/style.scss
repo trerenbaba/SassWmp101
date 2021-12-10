@@ -1,0 +1,23 @@
+div {
+  float: left;
+}
+%box {
+  //% ile ifade edilirse buna placeholder deniyor. style.css dosyasında box ifadesi gözükmez.
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  background-color: red;
+}
+
+#first {
+  @extend %box;
+  background-color: red;
+}
+#second {
+  @extend %box;
+  background-color: green;
+}
+#third {
+  @extend %box;
+  background-color: blue;
+}
